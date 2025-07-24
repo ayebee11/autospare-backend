@@ -54,7 +54,7 @@ const CartPage = () => {
                 className="flex items-center bg-[#1a1d23] rounded-lg shadow-md p-4 hover:shadow-lg transition"
               >
                 <img
-                  src={item.imageUrl || item.image}
+                  src={`/assets/${item.imageUrl}`}
                   alt={item.name}
                   className="w-24 h-24 object-contain rounded mr-6"
                 />
