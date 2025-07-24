@@ -1,0 +1,13 @@
+# Java
+target/
+*.class
+*.jar
+
+# Node/React
+node_modules/
+build/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
