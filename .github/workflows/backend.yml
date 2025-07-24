@@ -23,7 +23,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with Maven
-        working-directory: ./${{ matrix.service }}
+        working-directory: ./Backend/${{ matrix.service }}
         run: mvn clean package -DskipTests
 
       - name: Log in to DockerHub
@@ -33,7 +33,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        working-directory: ./${{ matrix.service }}
+        working-directory: ./Backend/${{ matrix.service }}
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/${{ matrix.service }}:latest .
 
